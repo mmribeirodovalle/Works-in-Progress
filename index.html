@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
     <head>
         <meta charset="UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Body Mass Index Calculatos</title>
-        <link rel = "stylesheet" href="jscript.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <meta name="keywords" content="gerador de senhas">
+
+        <link rel="stylesheet" href="index.css">
+        <title>Gerador de Senhas</title>
     </head>
     <body>
-        <main>
-            <div class="container">
-                <div class="title">Body Mass Index Calculator</div>
-                <div class="input">
-                    <label>Name</label>
-                    <input id="name">
-                </div>
-                <div class="input">
-                    <label>Height</label>
-                    <input type="number" id="height">
-                </div>
-                <div class="input">
-                    <label>Weight:</label>
-                    <input type="number" id="weight">
-                </div>
-                <button id="calculator">Calculate</button>
-                <div class="result" id="result"></div>
-            </div>
-        </main>
-        <script src="jscript.js"></script>
+        <img class="logo" src="ds.PNG" alt="Gerador senha logo">
+
+        <div class="container-input">
+            <span>Tamanho <span id="Valor"></span>caracteres</span>
+            <input id="slider" class="slider" type="range" min="5" max="25" value="15">
+            <button id="button" class="button-cta" onclick="generatePasssword()">Gera senha</button>
+        </div>
+
+        <div id="container-password" onclick="copyPassword()" class="container-password hide">
+            <span class="title">Sua senha foi gerada: </span>
+            <span id="password" class = "password"></span>
+            <span class="tooltip">Clique na senha para copiar. </span>
+        </div>
+
+        <script src="script.js"></script>
+
     </body>
 </html>
